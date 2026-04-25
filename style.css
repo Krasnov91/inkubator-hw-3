@@ -9,6 +9,7 @@
     margin: 0 auto;
     width: 100%;
     /* 📍 Максимальная ширина для контейнера */
+    max-width: 1140px;
 }
 
 body {
@@ -32,14 +33,20 @@ header span {
     padding: 60px 0;
     min-height: 100vh;
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
+    display: flex;
+    align-items: center;
 }
 
 .main-section .wrapper {
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
+
+    display: flex;
+    align-items: center;
 }
 
 .text-wrapper {
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
+    max-width: 425px;
 }
 
 .main-title {
@@ -64,6 +71,10 @@ header span {
 
 .about-section .wrapper {
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
 }
 
 select {
@@ -82,11 +93,13 @@ select {
 select:hover,
 .text-field:hover {
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
+    border: 1px solid #2965F1;
 }
 
 
 .info-wrapper {
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
+    display: flex;
 }
 
 .section-title {
@@ -103,6 +116,9 @@ select:hover,
 .frameworks-list,
 .books-list {
     /* 📍 Свойства flexbox для отступов между элементами в списках */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .frameworks-list {
@@ -114,25 +130,33 @@ select:hover,
 
 .skills-block {
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .skills {
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
+    min-width: 50%;
 }
 
 .books-list {
     font-weight: 400;
     font-size: 16px;
     padding-left: 20px;
+    min-width: 50%;
 }
 
 .label {
     font-weight: 400;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 form {
     margin-bottom: 40px;
+
 }
 
 .text-field {
@@ -160,6 +184,8 @@ form {
 
 .btn:hover {
     /* 📍 Стили для кнопки при наведении курсора */
+    background-color: rgba(41, 101, 241, 0.9);
+    cursor: pointer;
 }
 
 .line {
@@ -181,6 +207,7 @@ th, td {
 footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
+    text-align: center;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
 }
 
@@ -193,4 +220,5 @@ footer {
 
 .footer-link:hover {
     /* 📍 Стили для ссылки при наведении курсора */
+    text-decoration: underline;
 }
